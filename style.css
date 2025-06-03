@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #003A63;
+  color: #fff;
+}
+
+.logo {
+  height: 60px;
+}
+
+#lang-toggle {
+  padding: 0.5rem 1rem;
+  background-color: #007B50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h1, h2 {
+  color: #003A63;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "✔️ ";
+  color: #007B50;
+}
+
+footer {
+  background-color: #003A63;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  #lang-toggle {
+    margin-top: 10px;
+  }
+}

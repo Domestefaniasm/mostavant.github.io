@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MSSC | Operadora MOST AVANT SSC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="LOGO MSSC 1.png" alt="Logo MSSC" class="logo" />
+    <button id="lang-toggle">EN</button>
+  </header>
+
+  <section id="hero">
+    <h1 data-es="Tus aliados para que tu negocio triunfe en México" data-en="Your allies for business success in Mexico"></h1>
+  </section>
+
+  <section id="services">
+    <h2 data-es="Nuestros Servicios" data-en="Our Services"></h2>
+    <ul>
+      <li data-es="Sorteo, inspección y retrabajo de partes." data-en="Sorting, inspection and rework of parts."></li>
+      <li data-es="Consultoría, entrenamiento y capacitación de personal." data-en="Consulting, training and staff development."></li>
+      <li data-es="Ingeniería y aseguramiento de calidad." data-en="Engineering and quality assurance."></li>
+      <li data-es="Representación comercial." data-en="Commercial representation."></li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2 data-es="Compromiso con la calidad" data-en="Commitment to quality"></h2>
+    <p data-es="Contamos con certificación ISO 9001 y cobertura nacional con más de 80 inspectores." data-en="We are ISO 9001 certified and operate nationally with over 80 inspectors."></p>
+  </section>
+
+  <section id="team">
+    <h2 data-es="Equipo Operativo" data-en="Operational Team"></h2>
+    <p data-es="Presencia en San Luis Potosí, Sonora, Puebla, Querétaro, Coahuila y más." data-en="Presence in San Luis Potosí, Sonora, Puebla, Querétaro, Coahuila and more."></p>
+  </section>
+
+  <section id="contact">
+    <h2 data-es="Contacto" data-en="Contact"></h2>
+    <p>Email: <a href="mailto:eduardo@mostavant.com.mx">eduardo@mostavant.com.mx</a></p>
+    <p>Teléfono: <a href="tel:+524421153427">442 115 3427</a></p>
+    <a href="https://wa.me/524421153427" class="whatsapp">WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MSSC - Operadora Most Avant SSC</p>
+  </footer>
+
+  <script>
+    const langToggle = document.getElementById("lang-toggle");
+    let currentLang = "es";
+
+    function updateLanguage() {
+      document.querySelectorAll('[data-es]').forEach(el => {
+        el.innerText = el.getAttribute(`data-${currentLang}`);
+      });
+    }
+
+    langToggle.addEventListener("click", () => {
+      currentLang = currentLang === "es" ? "en" : "es";
+      langToggle.innerText = currentLang.toUpperCase() === "ES" ? "EN" : "ES";
+      updateLanguage();
+    });
+
+    updateLanguage();
+  </script>
+</body>
+</html>
